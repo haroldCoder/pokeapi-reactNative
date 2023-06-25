@@ -1,39 +1,37 @@
 {
   "expo": {
-    "name": "native-2",
+    "name": "koder-pokemon",
     "slug": "apipoke",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/pokeicon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.koderx.apipoke"
-    },
-    "android": {
-      "package": "com.koderx.apipoke",
-      "version": 1,
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-xxxxxx"
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "android": {
+      "package": "com.x.yyyyy",
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-xxxxxx"
+      }
     },
     "extra": {
       "eas": {
         "projectId": "803a3530-1749-4f99-a93d-3f2815600d57"
       }
-    },
-    "owner": "koderx"
+    }
   }
 }

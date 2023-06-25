@@ -1,4 +1,4 @@
-import { Alert, StatusBar } from 'react-native';
+import { Alert, ScrollView, StatusBar } from 'react-native';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
@@ -35,20 +35,22 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={{ backgroundColor: "#000", height: '100%', paddingTop: 5, padding: 20 }}>
-        <Text style={{ color: "#FFFF00", fontSize: 20 }}>PokeApi</Text>
-        <View style={{marginTop: 16}}>
-        {
-          pokedata.length > 0 ? (
-            pokedata.map((data: pokemon, index: any) => (
-              <CardMain name={data.name} sprites={data.sprites} />
-            ))
-          ) : (
-            <Text style={{ color: "#FFF" }}>No hay datos disponibles</Text>
-          )
-        }
-        </View>
-      </View>
+      <ScrollView>
+        <View style={{ backgroundColor: "#000", height: '100%', paddingTop: 5, padding: 20 }}>
+            <Text style={{ color: "#FFFF00", fontSize: 20 }}>PokeApi</Text>
+            <View style={{marginTop: 16}}>
+            {
+              pokedata.length > 0 ? (
+                pokedata.map((data: pokemon, index: any) => (
+                  <CardMain key={data.name} name={data.name} sprites={data.sprites} />
+                ))
+              ) : (
+                <Text style={{ color: "#FFF" }}>No hay datos disponibles</Text>
+              )
+            }
+            </View>
+          </View>
+        </ScrollView>
     </SafeAreaView>
   );
 }
