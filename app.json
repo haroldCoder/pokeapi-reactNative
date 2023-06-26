@@ -6,9 +6,9 @@
     "orientation": "portrait",
     "icon": "./assets/pokeicon.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./assets/pokemin.png",
+      "resizeMode": "center",
+      "backgroundColor": "#000"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
